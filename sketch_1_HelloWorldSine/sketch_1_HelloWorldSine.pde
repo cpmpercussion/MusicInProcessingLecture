@@ -13,8 +13,7 @@ void setup() {
   wave.patch(out);
 }
 
-void draw() {
-}
+void draw() {}
 
 // Try changing "Waves.SINE" to: 
 // "Waves.TRIANGLE", 
