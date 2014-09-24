@@ -8,7 +8,8 @@ void setup() {
   minim = new Minim(this);
   player = minim.loadFile("unilodge.mp3");
   player.play();
-  player.loop();
+//  player.loop(5);
+//  player.loop();
 }
 
 void draw() {
