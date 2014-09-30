@@ -18,8 +18,10 @@ void setup() {
 
   //float[] partials = {1,1.5,1.75,2,2.25,2.4,2.6,2.9}; // inharmonic
   
-  float[] partials = {1, 2, 3, 4, 5, 6, 7, 8}; // harmonic
-  //float[] partials = {1, 2, 4, 6, 8, 10, 12, 14}; // harmonic
+  float[] partials = {1, 2, 3, 4, 5, 6, 7, 8}; // harmonic (odd and even)
+  //float[] partials = {1, 2, 2, 4, 4, 6, 6, 8}; // harmonic (just even)
+  //float[] partials = {1, 1, 3, 3, 5, 5, 7, 7}; // harmonic (just odd)
+
 
   float[] amps = {1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3};
 
