@@ -25,7 +25,7 @@ The idea of this excercise is to control sounds with a simple interactive sketch
 
 - open one of your old "zoog" sketches that you can interact with using the mouse.
 - take the sound making components out of `sketch_3_FM_Synthesis` and put them into your zoog sketch.
-- change the sketch so that the sound moves when the zoog moves!
+- change the sketch so that the sound changes when the zoog moves!
 - you might want to add a `Damp` envelope to the signal chain so that you only hear sound when the zoog moves and not at other times. 
 
 ### 2. Make some generative music with sound files.
