@@ -16,12 +16,10 @@ class PhraseGenerator {
     envelope = new Damp(0.1, 4.0, 0.5);
     wave.patch(envelope);
     envelope.patch(out);
-
   }
 
   void playNote() {
     wave.setFrequency(random(1000) + 50);
-    //   envelope.activate(4,0.5f,0); 
     envelope.activate();
     println("playing a note!");
   }
