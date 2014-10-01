@@ -6,7 +6,6 @@ AudioOutput out;
 Oscil wave0, wave1, wave2, wave3, wave4, wave5, wave6, wave7;
 float waveAmplitude;
 float baseFrequency;
-int timeSinceLastChange;
 
 void setup() {
   size(1000, 400);
@@ -56,32 +55,3 @@ void draw()
     line( i, 200  - out.left.get(i)*400,  i+1, 200  - out.left.get(i+1)*400 );
   }
 }
-
-
-//void draw() {
-//}
-
-//void draw() {
-//  if (millis() - timeSinceLastChange > 100) {
-//    timeSinceLastChange = millis();
-//    baseFrequency++;
-//    wave1.setFrequency(baseFrequency);
-//    wave2.setFrequency(1.5 * baseFrequency);
-//    wave3.setFrequency(1.75 * baseFrequency);
-//  }
-//
-//}
-
-//void draw() {
-//    wave1.setFrequency((millis()*1.0/15000) * baseFrequency);
-//    wave2.setFrequency((millis()*1.0/10000 + 0.5) * baseFrequency);
-//    wave3.setFrequency((millis()*1.0/12000 + 0.7) * baseFrequency);
-//}
-
-
-
-// Try changing "Waves.SINE" to: 
-// "Waves.TRIANGLE", 
-// "Waves.SAW", 
-// "Waves.SQUARE", or 
-// "Waves.QUARTERPULSE"
