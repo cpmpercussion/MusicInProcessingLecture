@@ -5,7 +5,9 @@ Examples that go with my lecture on making music in Processing.
 
 ## Lab Instructions!
 
-This is going to be a noisy lab! Maybe bring some headphones?
+- This is going to be a noisy lab! Maybe bring some headphones?
+- The Minim library works fine for sound output on the iMacs in the Peter Karmell Building and the Linux machines in the CSIT labs.
+- The iMacs have a microphone, but the CSIT lab computers don't. So if you're in the CSIT labs, don't worry about question 3, or maybe try it on your own computer.
 
 ### 0. Make sure you have the Minim code reference up and minim up and running.
 
