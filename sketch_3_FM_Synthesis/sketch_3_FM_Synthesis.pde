@@ -10,11 +10,11 @@ float modulatorFrequency;
 int timeSinceLastChange;
 
 void setup() {
-  size(800, 400);
+  size(1024, 1024);
   minim = new Minim(this);
   out = minim.getLineOut();
   
-  waveAmplitude = 0.5;
+  waveAmplitude = 0.6;
   carrierFrequency = 220;
   modulatorFrequency = 440;
   
@@ -29,15 +29,15 @@ void setup() {
 void draw() {
   background(255);
   stroke(0);
-  strokeWeight(2);
+  strokeWeight(5);
   for( int i = 0; i < out.bufferSize() - 1; i++ )
   {
-    float x1  = map( i, 0, out.bufferSize(), 0, width );
-    float x2  = map( i+1, 0, out.bufferSize(), 0, width );
-    line( x1, 200 + out.left.get(i)*200, x2, 200 + out.left.get(i+1)*200);
+    float x1  = map( i, 0, out.bufferSize(), 0, width/3 );
+    float x2  = map( i+1, 0, out.bufferSize(), 0, width/3 );
+    line( x1*3, 512 + out.left.get(i)*512, x2*3, 512 + out.left.get(i+1)*512);
   }  
-  text( "Modulation frequency: " + modulator.frequency.getLastValue(), 5, 15 );
-  text( "Modulation amplitude: " + modulator.amplitude.getLastValue(), 5, 30 );
+//  text( "Modulation frequency: " + modulator.frequency.getLastValue(), 5, 15 );
+//  text( "Modulation amplitude: " + modulator.amplitude.getLastValue(), 5, 30 );
 }
 
 void mouseMoved() {
@@ -45,4 +45,9 @@ void mouseMoved() {
   float modulateFrequency = map( mouseX, 0, width, 0.1, 800 );
   modulator.setFrequency( modulateFrequency );
   modulator.setAmplitude( modulateAmount );
+}
+
+
+void mouseClicked() {
+ saveFrame(); 
 }
